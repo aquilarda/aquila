@@ -1,0 +1,42 @@
+<div class="footer">
+  <div class="footer-left">
+    <div class="footer-item"><a href="{% url 'home' %}">aquila</a></div>
+  </div>
+</div>
+
+<style>
+  .footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fadcd9;
+    border-radius: 1rem;
+    margin: 2.5rem;
+    font-size: xx-large;
+  }
+  .footer-item{
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fadcd9;
+  }
+  .footer-item:hover{
+    background-color: #f0d0cd;
+  }
+  @media only screen and (max-width: 600px) {
+    .footer{
+      font-size: medium;
+      flex-direction: column;
+      margin: 1rem;
+      padding: 0rem;
+    }
+  }
+  @media only screen and (max-width: 300px) {
+    .footer{
+      font-size: small;
+      flex-direction: column;
+      margin: 1rem;
+      padding: 0rem;
+    }
+  }
+</style>

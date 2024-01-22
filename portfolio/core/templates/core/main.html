@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="icon"
+    type="image/x-icon"
+    href="{% static 'favicon.ico' %}"
+  />
+    <title>aquila</title>
+  </head>
+  <body>
+    {% include 'core/navbar.html' %} {% block content %}
+    <!-- Your content goes here -->
+    {% endblock %} {%include 'core/footer.html' %}
+
+    <style>
+      body {
+        background-color: #f9f1f0;
+        color: #121212;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+        user-select: none;
+      }
+      a {
+        color: #121212;
+        user-select: none;
+        text-decoration: none;
+      }
+      hr {
+        color: #121212;
+      }
+    </style>
+  </body>
+</html>
