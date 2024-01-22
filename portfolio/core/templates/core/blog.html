@@ -1,5 +1,49 @@
 {% extends 'core/main.html' %} {% block content %}
 
-<div></div>
-<style></style>
+<div class="introduce-box">
+  <h1>aquila's Blog Page</h1>
+</div>
+<div class="blog-box">
+  {% for b in blog %}
+  <h2>{{b.blog_title}}</h2>
+  <hr />
+  <h3>{{b.blog_description}}</h3>
+  {% endfor%}
+</div>
+<style>
+  .introduce-box {
+    background-color: #fadcd9;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .blog-box {
+    background-color: #fadcd9;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  @media only screen and (max-width: 600px) {
+    .introduce-box {
+      font-size: medium;
+      margin: 1rem;
+    }
+    .blog-box {
+      font-size: medium;
+      margin: 1rem;
+    }
+  }
+  @media only screen and (max-width: 300) {
+    .introduce-box {
+      font-size: small;
+      margin: 1rem;
+    }
+    .blog-box {
+      font-size: small;
+      margin: 1rem;
+    }
+  }
+</style>
 {% endblock content%}

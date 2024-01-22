@@ -24,7 +24,6 @@ class Project(models.Model):
 class Blog(models.Model):
     blog_title = models.CharField("Blog Baslik", max_length=500)
     blog_description = models.TextField("Blog yazi")
-    blog_url = models.URLField("Blog link")
 
     class Meta:
         verbose_name = "blog"
@@ -32,3 +31,14 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.blog_title
+
+class UrlModel(models.Model):
+    name_url = models.CharField('Link Name', max_length=200)
+    url = models.URLField('link')
+
+    class Meta:
+        verbose_name = 'link'
+        verbose_name_plural = 'links'
+    
+    def __str__(self):
+        return self.name_url

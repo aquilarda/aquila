@@ -1,9 +1,78 @@
 {% extends 'core/main.html' %} {% block content %}
 
-<div>
+<div class="aboutme-box">
+  {% for a in about %}
+  <h2 class="aboutme-text">{{a.about_me}}</h2>
+  {% endfor %}
+</div>
 
+<div class="project-box">
+  <h2>My Projects</h2> <hr> <hr>
+  {% for p in project %}
+  <h3>{{p.project_title}}</h3> 
+  <h4>{{p.project_description}}</h4> <hr> <hr>
+  {% endfor %}
+</div>
+
+<div class="social-links">
+  <h1>&sstarf;</h1> <hr>
+  {% for u in url %}
+  <h2><a href="{{u.url}}">{{u.name_url}}</a></h2>
+  {% endfor %}
 </div>
 
 <style>
+  .aboutme-box{
+    background-color: #fadcd9;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .project-box{
+    background-color: #fadcd9;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .social-links{
+    background-color: #fadcd9;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+    text-align: center;
+  }
+  .social-links a{
+    color: #009c8f;
+  }
+  @media only screen and (max-width: 600px){
+    .aboutme-box{
+      font-size: medium;
+      margin: 1rem;
+    }
+    .project-box{
+      font-size: medium;
+      margin: 1rem;
+    }
+    .social-links{
+      font-size: medium;
+      margin: 1rem;
+    }
+  }
+  @media only screen and (max-width: 300){
+    .aboutme-box{
+      font-size: small;
+      margin: 1rem;
+    }
+    .project-box{
+      font-size: small;
+      margin: 1rem;
+    }
+    .social-links{
+      font-size: small;
+      margin: 1rem;
+    }
+  }
 </style>
 {% endblock content %}
