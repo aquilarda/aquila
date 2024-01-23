@@ -10,7 +10,8 @@
   <h2>My Projects</h2> <hr> <hr>
   {% for p in project %}
   <h3>{{p.project_title}}</h3> 
-  <h4>{{p.project_description}}</h4> <hr> <hr>
+  <h4>{{p.project_description}}</h4>
+  <h3><a href="{{p.project_url}}">{{p.project_url_name}}</a></h3> <hr> <hr>
   {% endfor %}
 </div>
 
@@ -44,6 +45,9 @@
     text-align: center;
   }
   .social-links a{
+    color: #009c8f;
+  }
+  .project-box a{ 
     color: #009c8f;
   }
   @media only screen and (max-width: 600px){

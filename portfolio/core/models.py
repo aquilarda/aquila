@@ -13,6 +13,8 @@ class About(models.Model):
 class Project(models.Model):
     project_title = models.CharField("Proje Basligi", max_length=100)
     project_description = models.TextField("Proje aciklama")
+    project_url_name = models.CharField("proje url adi", max_length=200)
+    project_url = models.CharField("proje url", max_length=300)
 
     class Meta:
         verbose_name = "project"
